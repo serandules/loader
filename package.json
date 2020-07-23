@@ -1,0 +1,29 @@
+{
+  "name": "loader",
+  "description": "loader",
+  "version": "0.0.0",
+  "author": {
+    "name": "serandives",
+    "email": "serandives@gmail.com"
+  },
+  "dependencies": {
+    "nconf": "0.10.0",
+    "async": "2.6.0",
+    "faker": "4.1.0",
+    "mongoose": "5.9.16",
+    "request": "2.88.2",
+    "moment": "2.26.0",
+    "lodash": "4.17.19",
+    "logger": "serandules/logger#master",
+    "errors": "serandules/errors#master",
+    "utils": "serandules/utils#master",
+    "model": "serandules/model#master",
+    "mongutils": "serandules/mongutils#master",
+    "model-workflows": "serandules/model-workflows#master",
+    "model-users": "serandules/model-users#master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/serandives/loader.git"
+  }
+}

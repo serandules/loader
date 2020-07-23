@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+.bootstrap
+
+env/.production
+env/.staging
+env/.development
+env/.travis
+env/.test
+env/.docker
