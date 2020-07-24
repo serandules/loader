@@ -45,6 +45,7 @@ exports.create = function (user, done) {
       if (e) {
         return done(e);
       }
+      console.log('location created: %s', b.id);
       done(null, b);
     });
   });

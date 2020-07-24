@@ -31,6 +31,7 @@ exports.create = function (user, done) {
       if (e) {
         return done(e);
       }
+      console.log('contact created: %s', b.id);
       done(null, b);
     });
   });

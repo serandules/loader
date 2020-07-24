@@ -47,6 +47,7 @@ exports.create = function (user, type, done) {
       if (e) {
         return done(e);
       }
+      console.log('binary created: %s', b.id);
       done(null, b);
     });
   });

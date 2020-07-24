@@ -110,6 +110,7 @@ var createRealEstate = function (user, done) {
               if (err) {
                 return done(err);
               }
+              console.log('realestate created: %s', b.id);
               done(null, b);
             });
           });

@@ -204,6 +204,7 @@ var createVehicle = function (user, done) {
               if (err) {
                 return done(err);
               }
+              console.log('vehicle created: %s', b.id);
               done(null, b);
             });
           });
@@ -218,7 +219,8 @@ var createVehicles = function (o, done) {
     if (err) {
       return done(err);
     }
-    async.eachLimit(users, 5, function (user, userDone) {
+    console.log('using concurrency', nconf.get('CONCURRENCY'), o.count)
+    async.eachLimit(users, nconf.get('CONCURRENCY'), function (user, userDone) {
       async.timesLimit(o.count, nconf.get('CONCURRENCY'), function (n, timesDone) {
         createVehicle(user, timesDone);
       }, userDone);

@@ -83,7 +83,13 @@ var createUsers = function (o, done) {
         }
         Users.update({_id: user.id}, {
           avatar: avatar.id
-        }, timesDone);
+        }, function (err) {
+          if (err) {
+            return timesDone(err);
+          }
+          console.log('user created: %s', user.id);
+          timesDone();
+        });
       });
     });
   }, done);
