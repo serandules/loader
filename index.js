@@ -143,9 +143,9 @@ var throttle = function (done) {
 
 var load = function (done) {
   var models = {
-    users: 1,
-    vehicles: 1,
-    realestates: 1
+    users: 10,
+    vehicles: 10,
+    realestates: 10
   };
 
   unthrottle(function (err) {
