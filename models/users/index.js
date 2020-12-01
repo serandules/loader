@@ -6,7 +6,8 @@ var request = require('request');
 
 var utils = require('utils');
 
-var Users = require('model-users');
+var models = require('models');
+var Users = models.model('users');
 
 var loaderUtils = require('../utils');
 var binaries = require('../binaries');
@@ -32,16 +33,16 @@ var createUser = function (usr, done) {
         if (err) {
           return done(err);
         }
-        utils.workflow('model-users', function (err, workflow) {
+        models.workflow('model-users', function (err, workflow) {
           if (err) {
             return done(err);
           }
           var usr = utils.json(user);
-          utils.toPermissions(usr.id, workflow, 'registered', usr, function (err, permissions) {
+          models.toPermissions(usr.id, workflow, 'registered', usr, function (err, permissions) {
             if (err) {
               return done(err);
             }
-            utils.toVisibility(usr.id, workflow, 'registered', usr, function (err, visibility) {
+            models.toVisibility(usr.id, workflow, 'registered', usr, function (err, visibility) {
               if (err) {
                 return done(err);
               }

@@ -9,9 +9,8 @@ var env = nconf.get('ENV');
 
 nconf.defaults(require('./env/' + env + '.json'));
 
-var utils = require('utils');
-
-var Tiers = require('model-tiers');
+var models = require('models');
+var Tiers = models.model('tiers');
 
 var mongourl = nconf.get('MONGODB_URI');
 

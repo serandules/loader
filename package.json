@@ -18,10 +18,7 @@
     "errors": "serandules/errors#master",
     "utils": "serandules/utils#master",
     "model": "serandules/model#master",
-    "mongutils": "serandules/mongutils#master",
-    "model-workflows": "serandules/model-workflows#master",
-    "model-tiers": "serandules/model-tiers#master",
-    "model-users": "serandules/model-users#master"
+    "mongutils": "serandules/mongutils#master"
   },
   "repository": {
     "type": "git",

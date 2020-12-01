@@ -3,9 +3,10 @@ var request = require('request');
 var utils = require('utils');
 var model = require('model');
 
-var Clients = require('model-clients');
-var Tokens = require('model-tokens');
-var Tiers = require('model-tiers');
+var models = require('models');
+var Clients = models.model('clients');
+var Tokens = models.model('tokens');
+var Tiers = models.model('tiers');
 
 var adminToken = null;
 
